@@ -77,7 +77,7 @@ public class DataAnnotationProcessor extends AbstractProcessor {
             annotatedElements.forEach(element -> {
                 // 获得当前遍历类的语法树
                 JCTree tree = (JCTree) trees.getTree(element);
-                // 使用GetterAndSetterTreeTranslator处理
+                // 使用DataTreeTranslator处理
                 tree.accept(new DataTreeTranslator(treeMaker, names, messager));
             });
         }
