@@ -21,7 +21,7 @@ import java.util.Set;
  *
  * @author r.shi 2021/5/27 16:29
  */
-@SupportedAnnotationTypes("com.ray.study.sample.lite.lombok.annotation.Data")
+@SupportedAnnotationTypes("com.ray.study.sample.simple.lombok.annotation.Data")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
 public class DataAnnotationProcessor extends AbstractProcessor {
 
@@ -72,7 +72,7 @@ public class DataAnnotationProcessor extends AbstractProcessor {
     public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
         messager.printMessage(Diagnostic.Kind.NOTE, "roundEnv --->" + roundEnv);
         if (!roundEnv.processingOver()) {
-            // 所有@GetterAndSetter注解标注的类
+            // 所有@Data注解标注的类
             Set<? extends Element> annotatedElements = roundEnv.getElementsAnnotatedWith(Data.class);
             annotatedElements.forEach(element -> {
                 // 获得当前遍历类的语法树

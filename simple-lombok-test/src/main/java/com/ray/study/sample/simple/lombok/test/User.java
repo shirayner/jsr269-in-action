@@ -14,10 +14,4 @@ public class User {
 
     private String name;
 
-    public static void main(String[] args) {
-        User user = new User();
-        //user.setId(1L);
-        System.out.println(user);
-    }
-
 }
