@@ -46,6 +46,10 @@ public class DataAnnotationProcessor extends AbstractProcessor {
     private Messager messager;
 
 
+    public DataAnnotationProcessor() {
+        super();
+    }
+
     /**
      * init 初始化
      *

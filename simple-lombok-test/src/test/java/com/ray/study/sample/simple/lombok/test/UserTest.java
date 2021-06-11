@@ -1,8 +1,8 @@
 package com.ray.study.sample.simple.lombok.test;
 
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 /**
  * description
@@ -17,6 +17,7 @@ public class UserTest {
         user.setId(1L);
         user.setName("tom");
         System.out.println(user.getName());
+        Assertions.assertEquals("tom", user.getName());
     }
 
 }
